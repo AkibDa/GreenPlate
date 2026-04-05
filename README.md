@@ -1,4 +1,4 @@
-# 🌱 GreenPlate
+# GreenPlate
 
 **A Full-Stack Sustainable Food Waste Reduction Platform**
 
@@ -32,8 +32,8 @@ GreenPlate is a full-stack web application designed to minimize food waste by co
 GreenPlate follows a modular full-stack architecture:
 
 * **Frontend:** React + Vite + TypeScript
-* **Backend:** Python-based API server
-* **Database & Authentication:** Firebase
+* **Backend:** FastAPI (Python-based) API server
+* **Database & Authentication:** Firestore Database & Firebase Authentication
 * **Containerization:** Docker support
 
 ---
@@ -105,7 +105,7 @@ GreenPlate/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/GreenPlate.git
+git clone https://github.com/AkibDa/GreenPlate.git
 cd GreenPlate
 ```
 
@@ -122,7 +122,8 @@ python main.py
 👉 Backend will run at:
 
 ```
-http://localhost:8000
+http://localhost:8080
+```
 ```
 Clients (Web + Mobile)
         │
@@ -306,9 +307,7 @@ System continuously analyzes:
 ### DevOps
 
 * Docker
-* Docker Compose
 
----
 ---
 
 ### 3️⃣ Frontend Setup
@@ -354,7 +353,7 @@ GreenPlate/
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/GreenPlate.git
+git clone https://github.com/AkibDa/GreenPlate.git
 cd GreenPlate
 ```
 
@@ -371,7 +370,7 @@ python main.py
 Runs on:
 
 ```
-http://localhost:8000
+http://localhost:8080
 ```
 
 ---
@@ -380,7 +379,7 @@ http://localhost:8000
 
 ```bash
 cd frontend
-http://localhost:5173
+http://localhost:8000
 ```
 
 ---
@@ -421,7 +420,7 @@ Create `.env` file (frontend):
 Create a `.env` file inside the **frontend** directory:
 
 ```env
-VITE_API_URL=http://localhost:8000
+VITE_API_URL=http://localhost:8080
 
 VITE_FIREBASE_API_KEY=
 VITE_FIREBASE_AUTH_DOMAIN=
@@ -482,10 +481,10 @@ VITE_FIREBASE_PROJECT_ID=your_project_id
 VITE_FIREBASE_STORAGE_BUCKET=your_bucket
 VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 VITE_FIREBASE_APP_ID=your_app_id
+
 ```
-
 > ⚠️ Never commit `.env` files to version control.
-
+```
 ---
 
 ## 🐳 Docker Setup (Optional)
@@ -493,7 +492,7 @@ VITE_FIREBASE_APP_ID=your_app_id
 Run the entire project using Docker:
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 ---
@@ -565,13 +564,6 @@ Open a Pull Request.
 
 ---
 
-## 📄 License
-
-MIT License
-
----
-
-
 ## 🌍 Vision
 
 To build a **sustainable food ecosystem** where surplus food is efficiently redistributed using technology and behavioral incentives.
@@ -605,9 +597,3 @@ This project is licensed under the terms specified in the LICENSE file.
 ## 🌍 Vision
 
 GreenPlate aims to reduce food waste and promote sustainability by leveraging technology to connect surplus food with people who need it.
-
----
-
-**Built with 💚 for a more sustainable future**
-
-
